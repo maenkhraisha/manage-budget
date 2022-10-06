@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # devise_for :users
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+
+  devise_for :users
+  root to: "home#index"
 end
+
+
+
+#  use this just if you want to use link to insted of button to for sign out
+#   devise_scope :user do  
+#     get '/users/sign_out' => 'devise/sessions#destroy'     
+#  end
