@@ -1,0 +1,24 @@
+
+
+<div class="container">
+    <%= form_with(model: @purchases) do |form| %> 
+
+        <h1>add new purchase</h1>
+
+        <%= form.label :name , class: "form-label"%>
+        <%= form.text_field :name , class: "form-control"%>
+
+        <%= form.label :amount , class: "form-label"%>
+        <%= form.text_field :amount , class: "form-control"%>
+
+        <%# list all groups %>
+        <%= form.collection_check_boxes :group_ids, Group.all, :id, :name, { hide_label: true } %>        
+        <%# list all groups %>
+        
+        <div>
+            <%= form.submit "Add Purchases", class: "btn btn-primary mt-3" %>
+        </div>
+        
+
+    <% end %>
+</div>

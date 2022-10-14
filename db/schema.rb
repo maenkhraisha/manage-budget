@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_09_195227) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_13_200949) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,22 +42,30 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_09_195227) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "categorizations", force: :cascade do |t|
+    t.bigint "group_id", null: false
+    t.bigint "purchase_id", null: false
+    t.index ["group_id"], name: "index_categorizations_on_group_id"
+    t.index ["purchase_id"], name: "index_categorizations_on_purchase_id"
+  end
+
   create_table "groups", force: :cascade do |t|
-    t.bigint "author_id_id", null: false
+    t.bigint "user_id", null: false
     t.string "name"
     t.datetime "created_at", precision: nil
-    t.index ["author_id_id"], name: "index_groups_on_author_id_id"
+    t.index ["user_id"], name: "index_groups_on_user_id"
   end
 
   create_table "purchases", force: :cascade do |t|
-    t.integer "author_id", null: false
+    t.bigint "user_id", null: false
     t.string "name"
     t.decimal "amount"
     t.datetime "created_at", precision: nil
-    t.index ["author_id"], name: "index_purchases_on_author_id"
+    t.index ["user_id"], name: "index_purchases_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "name", default: "", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -76,5 +84,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_09_195227) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "groups", "users", column: "author_id_id"
+  add_foreign_key "categorizations", "groups"
+  add_foreign_key "categorizations", "purchases"
+  add_foreign_key "groups", "users"
+  add_foreign_key "purchases", "users"
 end

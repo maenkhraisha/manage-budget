@@ -1,0 +1,9 @@
+
+<div class="container">
+    <h1>Group Details</h1>
+
+    <%if @groups.icon.persisted? && @groups.icon.image? %>
+        <%= image_tag @groups.icon   %>
+    <%end %>
+    <p><%= @groups.name  %></p>
+</div>

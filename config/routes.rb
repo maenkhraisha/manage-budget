@@ -1,14 +1,11 @@
 Rails.application.routes.draw do
-  # devise_for :users
-
 
   devise_for :users
+  resources :users
+
+  resources :groups, only: [:index, :show, :new, :create] 
+  resources :purchases, only: [:index, :show, :new, :create]
+  
   root to: "home#index"
 end
 
-
-
-#  use this just if you want to use link to insted of button to for sign out
-#   devise_scope :user do  
-#     get '/users/sign_out' => 'devise/sessions#destroy'     
-#  end

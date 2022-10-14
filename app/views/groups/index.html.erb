@@ -1,0 +1,10 @@
+<div class="container">
+    <%@groups.each do |group|%>
+    <%if group.icon.persisted? && group.icon.image? %>
+        <%= image_tag group.icon %>  
+    <%end%>
+        <h3><%= group.id %></h3>
+        <p><%= link_to group.name , group_path(group.id) %></p>
+    <%end%>
+</div>
+

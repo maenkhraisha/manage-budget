@@ -1,0 +1,16 @@
+<div class="container">
+    <%= link_to "Back", root_path, class: "btn btn-primary" %>
+    <%@purchases.each do |purchase|%>
+        <div class="border rounded m-1">
+            <p><%= purchase.name %></p>
+            <p><%= purchase.amount %></p>
+            <%# show all the category for the purchase %>
+            <% purchase.group.each do |g| %>
+                <p>
+                    <%= g.name %>
+                </p>
+            <% end %>
+            <%# ====================================== %>                        
+        </div>        
+    <%end%>
+</div>
