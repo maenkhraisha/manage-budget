@@ -4,7 +4,9 @@
     --gray: #434b54;
 }
 
-
+ul{
+    list-style: none;
+}
 .bg-blue{
     background-color: var(--blue);
     color: white;
@@ -17,15 +19,50 @@
 }
 
 .navbar-line{
-    height: 4px;
-    width: 40px;
     background-color: white;
-    color: white;
+    height: 0.25rem;
+    width: 2rem;
+    margin-top: 0.25rem;
     border-radius: 2px;
-
-    margin: 8px 0;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--blue);
+    color: white;
+    padding: 0.5rem 0;
 }
 
 img, svg {
     width: 150px;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active,
+.nav-link{
+    color: white;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .hidden {
+        display: none;
+    }        
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
 }

@@ -6,4 +6,12 @@
         <%= image_tag @groups.icon   %>
     <%end %>
     <p><%= @groups.name  %></p>
+
+    <%# show purchase of the group %>
+         <% @groups.purchases.each do |p| %>
+                <p>
+                    <%= p.name %>
+                    <%= p.amount %>
+                </p>
+            <% end %>
 </div>
