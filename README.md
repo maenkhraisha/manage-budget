@@ -7,6 +7,8 @@
 ## Live demo
 [Live Demo Link](https://budget-app-maen.herokuapp.com/)
 
+[Live Video Link](https://www.loom.com/share/ea6b6118e4ee496e89c6cb8cc6f40ab5)
+
 ## Built With
 
 - ![](https://img.shields.io/badge/Github-blueviolet)
