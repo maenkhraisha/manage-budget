@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-
   has_many :groups
   has_many :purchases
   has_one_attached :image
