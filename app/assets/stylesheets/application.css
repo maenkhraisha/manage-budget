@@ -1,85 +1,99 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-:root{
-    --bs-logo-font-family: 'Fredoka One', 'cursive';
-    --blue: #3778c2; 
-    --green: #5fb523;
-    --gray: #BABABA;
+
+:root {
+  --bs-logo-font-family: 'Fredoka One', 'cursive';
+  --blue: #3778c2;
+  --green: #5fb523;
+  --gray: #bababa;
 }
 
-ul{
-    list-style: none;
-}
-.bg-blue{
-    background-color: var(--blue);
-    color: white;
-}
-.bg-green{
-    background-color: var(--green);
-}
-.txt-gray{
-    color: var(--gray);
+ul {
+  list-style: none;
 }
 
-.logo-txt{
-    font-family: var(--bs-logo-font-family);
-    text-align: center;
+.bg-blue {
+  background-color: var(--blue);
+  color: white;
 }
 
-.navbar-line{
-    background-color: white;
-    height: 0.25rem;
-    width: 2rem;
-    margin-top: 0.25rem;
-    border-radius: 2px;
+.bg-green {
+  background-color: var(--green);
 }
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items:baseline ;
-    background-color: var(--blue);
-    color: white;
-    padding: 0.5rem;    
+
+.txt-gray {
+  color: var(--gray);
+}
+
+.logo-txt {
+  font-family: var(--bs-logo-font-family);
+  text-align: center;
+}
+
+.navbar-line {
+  background-color: white;
+  height: 0.25rem;
+  width: 2rem;
+  margin-top: 0.25rem;
+  border-radius: 2px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: var(--blue);
+  color: white;
+  padding: 0.5rem;
 }
 
 .group-img {
-    width: 75px;
-    height: 75px;
-    margin: 0.5rem;
+  width: 75px;
+  height: 75px;
+  margin: 0.5rem;
 }
 
-.profile-img{
-    width: 100px;
+.profile-img {
+  width: 100px;
 }
 
-.nav-link:hover,
+/* .nav-link:hover,
 .nav-link:focus,
 .nav-link:active,
-.nav-link{
-    color: white;
+.nav-link {
+  color: white;
+} */
+
+.calender-icon {
+  width: 1rem;
 }
 
-.calender-icon{
-    width: 1rem;
-}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .hidden {
-        display: none;
-    }        
+  .hidden {
+    display: none;
+  }
 }
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
 
-}
+/* @media only screen and (min-width: 600px) {
+
+} */
+
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
 
-}
+/* @media only screen and (min-width: 768px) {
+
+} */
+
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
 
-}
+/* @media only screen and (min-width: 992px) {
+
+} */
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    
-}
+
+/* @media only screen and (min-width: 1200px) {
+
+} */
