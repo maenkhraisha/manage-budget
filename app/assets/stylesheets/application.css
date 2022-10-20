@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 :root{
+    --bs-logo-font-family: 'Fredoka One', 'cursive';
     --blue: #3778c2; 
     --green: #5fb523;
-    --gray: #434b54;
+    --gray: #BABABA;
 }
 
 ul{
@@ -14,8 +16,13 @@ ul{
 .bg-green{
     background-color: var(--green);
 }
-.bg-gray{
-    background-color: var(--gray);
+.txt-gray{
+    color: var(--gray);
+}
+
+.logo-txt{
+    font-family: var(--bs-logo-font-family);
+    text-align: center;
 }
 
 .navbar-line{
@@ -28,13 +35,20 @@ ul{
 .header{
     display: flex;
     justify-content: space-between;
+    align-items:baseline ;
     background-color: var(--blue);
     color: white;
-    padding: 0.5rem 0;
+    padding: 0.5rem;    
 }
 
-img, svg {
-    width: 150px;
+.group-img {
+    width: 75px;
+    height: 75px;
+    margin: 0.5rem;
+}
+
+.profile-img{
+    width: 100px;
 }
 
 .nav-link:hover,
@@ -44,6 +58,9 @@ img, svg {
     color: white;
 }
 
+.calender-icon{
+    width: 1rem;
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .hidden {

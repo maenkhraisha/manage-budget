@@ -1,17 +1,32 @@
 
 <div class="container">
-    <h1>Group Details</h1>
 
-    <%if @groups.icon.persisted? && @groups.icon.image? %>
-        <%= image_tag @groups.icon   %>
-    <%end %>
-    <p><%= @groups.name  %></p>
+    <div>
+        <%if @groups.icon.persisted? && @groups.icon.image? %>
+            <%= image_tag @groups.icon , class: 'group-img'   %>
+        <%end %>
+        <%= @groups.name  %>
+    </div>
+
+    <div>
+    </div>
 
     <%# show purchase of the group %>
-         <% @groups.purchases.each do |p| %>
-                <p>
-                    <%= p.name %>
-                    <%= p.amount %>
-                </p>
-            <% end %>
+    <% total = 0 %>
+    <% @groups.purchases.each do |p| %>
+        <div class="m-2 border-bottom">            
+            <div class="d-flex">
+                <p class="me-1"><%= p.name %></p>
+                <p><%= p.amount %></p>
+            </div> 
+            <%= image_tag 'calender.svg' , class: 'calender-icon'%>           
+            <% total += p.amount|| 0%>
+            <%= p.created_at.strftime('%d %m %Y') %>
+        </div>        
+    <% end %>
+
+    <div class="mt-3">
+        <b>Total Payments</b><span> $ <%= total %></span>        
+    </div>
+
 </div>

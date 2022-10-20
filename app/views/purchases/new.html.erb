@@ -3,16 +3,18 @@
 <div class="container">
     <%= form_with(model: @purchases) do |form| %> 
 
-        <h1>add new purchase</h1>
-
-        <%= form.label :name , class: "form-label"%>
-        <%= form.text_field :name , class: "form-control"%>
-
-        <%= form.label :amount , class: "form-label"%>
-        <%= form.text_field :amount , class: "form-control"%>
+        <%= form.text_field :name , class: "form-control mt-2", placeholder: 'Name' %>
+        
+        <%= form.text_field :amount , class: "form-control mt-2" , placeholder: 'Amount'%>
 
         <%# list all groups %>
-        <%= form.collection_check_boxes :group_ids, Group.all, :id, :name, { hide_label: true } %>        
+        <%# <%= form.collection_check_boxes :group_ids,  current_user.groups.all, :id, :name, { hide_label: true } %> 
+        
+        <%= collection_check_boxes(:purchase, :group_ids, current_user.groups.all, :id, :name, { hide_label: true }) do |b|
+           b.label class:"d-flex m-2" do
+           b.check_box(class: "form-check-input me-1")  + b.text
+            end
+        end%>       
         <%# list all groups %>
         
         <div>
