@@ -56,12 +56,12 @@ ul {
   width: 100px;
 }
 
-/* .nav-link:hover,
+.nav-link,
+.nav-link:hover,
 .nav-link:focus,
-.nav-link:active,
-.nav-link {
+.nav-link:active {
   color: white;
-} */
+}
 
 .calender-icon {
   width: 1rem;
