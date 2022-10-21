@@ -10,6 +10,7 @@ gem 'rails', '~> 7.0.4'
 gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'letter_opener'
 gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'rails-controller-testing'
 
 # --------------------------------
 

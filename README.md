@@ -7,7 +7,7 @@
 ## Live demo
 [Live Demo Link](https://budget-app-maen.herokuapp.com/)
 
-[Live Video Link](https://www.loom.com/share/ea6b6118e4ee496e89c6cb8cc6f40ab5)
+[Live Video Link](https://www.loom.com/share/749e523e50e74af293d3c71f733197e8)
 
 ## Built With
 
