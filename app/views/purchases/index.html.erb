@@ -1,0 +1,18 @@
+<div class="container mt-3">    
+    <%@purchases.each do |purchase|%>
+        <div class="border-bottom m-2 p-2">
+            
+            <div class="d-flex">
+                <p class="me-2 fw-bold"><%= purchase.name %></p>
+                <p><%= purchase.amount %></p>
+            </div>
+            <%# show all the category for the purchase %>
+            <div class="d-flex flex-wrap">
+                <% purchase.group.each do |g| %>                
+                    <p class="badge rounded-pill bg-primary me-2 p-2"><%= g.name %></p>
+                <% end %>
+            </div>
+            <%# ====================================== %>                        
+        </div>        
+    <%end%>
+</div>

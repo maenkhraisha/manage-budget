@@ -1,0 +1,15 @@
+<div class="d-flex flex-column justify-content-around align-items-center align-items-center vh-100 w-100 ">
+    <div class="logo-txt ">
+        <%= image_tag 'main-image.svg', class: "m-3" %>
+        <h3>Manage</h3>
+        <h1>Your</h1>
+        <h3>Budget</h3>
+    </div>   
+
+<%if !user_signed_in? %>
+    <div class="w-100 text-center ">  
+        <%= button_to "LOG IN", new_user_session_path, class:"btn btn-primary w-75 mb-2"%>
+        <%= link_to "SIGN UP", new_user_registration_path, class:"text-secondary"%>
+    </div>
+<%end%>
+</div>

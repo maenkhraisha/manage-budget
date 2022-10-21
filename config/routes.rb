@@ -1,6 +1,11 @@
-Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+# frozen_string_literal: true
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+Rails.application.routes.draw do
+  devise_for :users
+  resources :users
+
+  resources :groups, only: %i[index show new create]
+  resources :purchases, only: %i[index show new create]
+
+  root to: 'home#index'
 end
